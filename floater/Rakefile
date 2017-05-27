@@ -1,0 +1,40 @@
+require "rake/clean"
+
+# definitions
+service = "floater"
+cc = "clang"
+cflags = "-Wall -Wshadow -Wextra -std=gnu11 -O0 -fPIE"
+ldflags = "-pie -lm -lseccomp"
+defines = ""
+incpath = "libctf"
+sources = FileList["*.c"]
+sources << sources.delete("#{service}.c")  # shift service file to the end of the array
+objects = sources.ext("o")
+
+# tasks
+CLEAN.include("*.o")
+CLOBBER.include("#{service}")
+task :release => "#{service}" do
+    sh "strip -s #{service}"
+end
+task :alarm do
+    defines += " -D_ALARM"
+    Rake::Task[:release].invoke
+end
+task :debug do
+    cflags += " -g"
+    defines += " -D_DEBUG"
+    Rake::Task["#{service}"].invoke
+end
+task :default => ["#{service}"]
+
+# rules
+rule ".o" => ".c" do |t|
+    sh "#{cc} #{cflags} #{defines} -I#{incpath} -c #{t.source} -o #{t.name}"
+end
+file "libctf.o" => ["#{incpath}/ctf.h", "#{incpath}/ctf.c"] do
+    sh "#{cc} #{cflags} #{defines} -I#{incpath} -c #{incpath}/ctf.c -o libctf.o"
+end
+file "#{service}" => objects.push("libctf.o") do
+    sh "#{cc} #{cflags} #{defines} #{ldflags} #{objects} -o #{service}"
+end

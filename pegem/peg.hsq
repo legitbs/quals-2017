@@ -1,0 +1,172 @@
+int printf(char *s);
+int puts(int s);
+int getchar();
+//char FLAG[] = "THE FLAG WILL BE HERE IN THE VULNERABLE SERVICE";
+char FLAG[] = "Who really needs more than one instruction?    ";
+char Board[15];
+char MOVES[] = "ABdACfBDgBEiCEhCFjDBaDGkDHmEHlEInFCaFImFJoGDbHEcIEbJFcKGdJHeMHdMIfNIeOJfDEfFEdGHiIHgHIjJIhKLmMLkLMnNMlMNoONmLHe";
+char Name[32];
+
+void Winner(void) {
+	int i = 0;
+
+	printf("Tell us your name: ");
+	while ((Name[i] = getchar()) != '\n') {
+		// overflow of Name overwrites Winner() function
+		if (++i > 1024) {
+			break;
+		}
+	}
+	Name[i] = '\0';
+	printf("Congrats ");
+	puts(Name);
+	printf(", you won all 15 combinations\n");
+	return;
+}
+
+void InitBoard(int Space) {
+	int i;
+	for (i = 0; i < 15; i++) {
+		if (i == Space) {
+			Board[i] = 0;
+		} else {
+			Board[i] = 1;
+		}
+	}
+}
+
+void PrintBoard(void) {
+	printf("    %c\n", 'a'-Board[0]*32);
+	printf("   %c %c\n", 'b'-Board[1]*32, 'c'-Board[2]*32);
+	printf("  %c %c %c\n", 'd'-Board[3]*32, 'e'-Board[4]*32, 'f'-Board[5]*32);
+	printf(" %c %c %c %c\n", 'g'-Board[6]*32, 'h'-Board[7]*32, 'i'-Board[8]*32, 'j'-Board[9]*32);
+	printf("%c %c %c %c %c\n", 'k'-Board[10]*32, 'l'-Board[11]*32, 'm'-Board[12]*32, 'n'-Board[13]*32, 'o'-Board[14]*32);
+}
+
+int Move(void) {
+	char Src, Dst;
+	int i, Start, Middle, End;
+
+	printf("Your move (q to quit): ");
+	Src = getchar();
+	if (Src == 'q') {
+		return(0);
+	}
+	Dst = getchar();
+	// eat newline
+	getchar();
+
+	if (Src < 'A' || Src > 'O') {
+		printf("Invalid Source\n");
+		return(1);
+	}
+	
+	if (Dst < 'a' || Dst > 'o') {
+		printf("Invalid Destination\n");
+		return(1);
+	}
+
+	if (!Board[Src-'A']) {
+		printf("No peg in src\n");
+		return(1);
+	}
+	if (Board[Dst-'a']) {
+		printf("Peg in destination already\n");
+		return(1);
+	}
+	
+	for (i = 0; i < 111; i+=3) {
+		Start = MOVES[i];
+		Middle = MOVES[i+1];
+		End = MOVES[i+2];
+		if (Src == Start) {
+			if (Dst == End) {
+				if (!Board[Middle-65]) {
+					goto Invalid;
+				}
+				Board[Src-65] = 0;
+				Board[Middle-65] = 0;
+				Board[Dst-97] = 1;
+				return(1);
+			} else {
+				continue;
+			}
+		} else {
+			continue;
+		}
+	}
+
+	printf("Invalid move\n");
+	return(1);
+
+Invalid:
+	printf("Invalid move: Middle peg is empty\n");
+	return(1);
+}
+
+int IsDone(void) {
+	int i, Start, Middle, End;
+	int PegCount = 0;
+
+	// See if any possible moves are left
+	for (i = 0; i < 111; i+=3) {
+		Start = MOVES[i];
+		Middle = MOVES[i+1];
+		End = MOVES[i+2];
+		if (Board[Start-65] && Board[Middle-65] && !Board[End-97]) {
+			// yep
+			return(0);
+		}
+	}
+
+	// Nope, count pegs
+	for (i = 0; i < 15; i++) {
+		if (Board[i]) {
+			PegCount++;
+		}
+	}
+
+	return(PegCount);
+}
+
+int main(void) {
+	int Done;
+	int Chances = 3;
+	int Wins = 0;
+
+	printf("Ye old peg game.\n");
+	printf("Jump pegs by sending the source peg (ie: F), and destination space (ie: a) followed by a newline\n");
+	printf("Capital letters are pegs, lower-case letters are spaces\n");
+	printf("Win 15 times and you can call yourself the master of the peg game\n\n");
+
+	InitBoard(Wins);
+	while (1) {
+		PrintBoard();
+		if (!Move()) {
+			return(0);
+		}
+		Done = IsDone();
+		if (Done != 0) {
+			PrintBoard();
+			if (Done == 1) {
+				printf("Game over.  Pegs remaining %d.  Great job!\n", Done);
+				Wins++;
+				if (Wins == 15) {
+					Winner();
+					return(0);
+				}
+				InitBoard(Wins);
+				continue;
+			} else {
+				if (--Chances) {
+					printf("Game over.  Pegs remaining %d.  Try harder!  %d more chances.\n", Done, Chances);
+					InitBoard(Wins);
+					continue;
+				} else {
+					printf("Game over.\n");
+				}
+			}
+			return(0);
+		}
+	}
+}

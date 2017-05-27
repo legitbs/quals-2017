@@ -1,0 +1,9 @@
+[submodule "faggin/libctf"]
+	path = faggin/libctf
+	url = https://github.com/fuzyll/libctf.git
+[submodule "floater/libctf"]
+	path = floater/libctf
+	url = https://github.com/fuzyll/libctf.git
+[submodule "pepperidge-farm/VMNDH-2k12"]
+	path = pepperidge-farm/VMNDH-2k12
+	url = https://github.com/JonathanSalwan/VMNDH-2k12.git

@@ -1,0 +1,9 @@
+SECTIONS
+{
+_GLOBAL_OFFSET_TABLE_ = .;
+  .text.startup : { *(.text.startup) }
+  .text : { *(.text) }
+  .data : {
+	 *(.rodata)
+	 *(.data) }
+}

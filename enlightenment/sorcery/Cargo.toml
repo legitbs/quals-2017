@@ -1,0 +1,11 @@
+[package]
+name = "sorcery"
+version = "0.1.0"
+authors = ["Bryce Kerley <bkerley@brycekerley.net>"]
+
+[dependencies]
+
+[profile.release]
+lto = true
+panic = 'abort'
+opt-level = 's'

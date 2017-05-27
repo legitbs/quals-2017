@@ -1,0 +1,12 @@
+with "aws";
+
+project awsno is
+   for Source_Dirs use (".");
+   for Languages use ("Ada", "C");
+   for Main use ("awsno.adb");
+
+   package Builder is
+      for Default_Switches ("Ada") use ("-gnat2012");
+   end Builder;
+
+end awsno;

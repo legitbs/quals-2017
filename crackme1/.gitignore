@@ -1,0 +1,7 @@
+.depends.mf
+build
+tmp
+magic
+.depends.in
+built
+src/check.?

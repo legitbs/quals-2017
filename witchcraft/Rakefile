@@ -1,0 +1,40 @@
+require 'rake/loaders/makefile'
+
+SWIFTC = "swiftc"
+BUILD_DIR = "build"
+SOURCE_DIR = "src"
+SWIFTFLAGS = "-g -warnings-as-errors"
+
+BINARY = "witchcraft"
+
+SAMPLE_SOURCE = "priv/Cory_Doctorow_-_Down_and_Out_in_the_Magic_Kingdom.txt"
+
+GHOST_SOURCES = ["check.swift"].map{|fn| File.join(SOURCE_DIR, fn)}
+REAL_SOURCES = Rake::FileList[File.join(SOURCE_DIR, '*.swift')] - GHOST_SOURCES
+SOURCES = (REAL_SOURCES + GHOST_SOURCES).uniq
+
+OBJECTS = SOURCES.map do |src|
+  o = src.sub(%r{\Asrc}, "build").sub(%r{\.swift\Z}, ".o")
+  file o => [src, BUILD_DIR] do |t|
+    sh "#{ SWIFTC } #{SWIFTFLAGS} -c -o #{t.name} #{t.prerequisites[0]}"
+  end
+  o
+end
+
+
+file "src/check.swift" => ["tool/gen.rb",
+                       SAMPLE_SOURCE] do |t|
+  sh "ruby #{t.prerequisites.first}"
+end
+
+task :clean do
+  sh "rm -rf #{BUILD_DIR} #{BINARY} #{GHOST_SOURCES.join(' ')}"
+end
+
+task :default => BINARY
+
+file BINARY => OBJECTS do |t|
+  sh "#{ SWIFTC } #{SWIFTFLAGS} -o #{t.name} #{t.prerequisites.join(' ')}"
+end
+
+directory BUILD_DIR

@@ -1,0 +1,7 @@
+/doc/
+/lib/
+/bin/
+/.shards/
+alchemy
+tmp
+check.cr

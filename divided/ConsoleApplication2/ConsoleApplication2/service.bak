@@ -1,0 +1,83 @@
+#include <libcgc.h>
+#include "libc.h"
+
+#define STR0 "Hello "
+#define STR1 ".\nThis implements a simple echo service\n"
+
+#define NAME_SIZE 4
+#define BUF_SIZE 1024
+
+size_t printf(const char *format, ...);
+
+char * get_name(void *secret_page);
+size_t receive_line(int fd, char *buf, size_t size);
+
+char * get_name(void *secret_page) {
+    char *buf;
+    const char *names[] = {"Matt", "Mark", "Luke", "John"};
+    unsigned int index;
+    int ret;
+    int i;
+   
+    index = ((int *)secret_page)[0] % (sizeof(names) / sizeof(names[0]));
+
+    ret = allocate(NAME_SIZE + 1, 0, (void **) &buf);
+    if (ret != 0)
+        _terminate(1);
+
+    for (i = 0; i < NAME_SIZE; i++) {
+        buf[i] = names[index][i];
+    }
+
+    return buf;
+}
+
+size_t receive_line(int fd, char *buf, size_t size) {
+    char c;
+    size_t total = 0;
+    size_t read = 0;
+
+    while (1) {
+        if (receive(fd, &c, 1, &read) != 0) {
+            _terminate(1);
+        }
+
+        if (read == 0) {
+            return 0;
+        }
+
+        if (total >= size) {
+            return 0;
+        }
+
+        buf[total++] = c;
+
+        if (c == '\n') {
+            break;
+        }
+    }
+
+    return total;
+}
+
+
+int __attribute__((fastcall)) main(int secret_page_i, char *unused[]) {
+    void *secret_page = (void *)secret_page_i;
+    char buf[1024];
+    char *name;
+    int ret;
+    size_t size;
+
+
+ 
+    while (1) {
+        size = receive_line(STDIN, buf, sizeof(buf) - 1);
+        if (size == 0)
+            _terminate(1);
+
+        buf[size] = 0;
+
+        if (ret != 0)
+            _terminate(1);
+    }
+}

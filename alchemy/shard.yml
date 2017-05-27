@@ -1,0 +1,13 @@
+name: alchemy
+version: 0.1.0
+
+authors:
+  -  <>
+
+targets:
+  alchemy:
+    main: src/alchemy.cr
+
+crystal: 0.21.1
+
+license: MIT

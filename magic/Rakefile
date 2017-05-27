@@ -1,0 +1,54 @@
+require 'rake/loaders/makefile'
+
+CC = "gcc"
+BUILD_DIR = "build"
+SOURCE_DIR = "src"
+CFLAGS = "-Wall -Os"
+
+BINARY = "magic"
+
+SAMPLE_SOURCE = "priv/Cory_Doctorow_-_Down_and_Out_in_the_Magic_Kingdom.txt"
+
+GHOST_SOURCES = ["check.c"].map{|fn| File.join(SOURCE_DIR, fn)}
+REAL_SOURCES = Rake::FileList[File.join(SOURCE_DIR, '*.c')]
+SOURCES = (REAL_SOURCES + GHOST_SOURCES).uniq
+
+OBJECTS = SOURCES.map do |src|
+  src.sub(%r{\Asrc}, "build").sub(%r{\.c\Z}, ".o")
+end
+
+file "src/check.c" => ["tool/gen.rb",
+                       SAMPLE_SOURCE] do |t|
+  sh "ruby #{t.prerequisites.first}"
+end
+
+file ".depends.in" => SOURCES do |t|
+  sh "gcc -MM #{CFLAGS} #{t.prerequisites.join(' ')} > #{t.name}"
+end
+
+file ".depends.mf" => ".depends.in" do |t|
+  File.open(t.name, 'w') do |mf|
+    File.open(t.prerequisites.first, 'r').each_line do |orig|
+      mf.puts orig.sub(%r{\A(\w)}, "#{BUILD_DIR}/\\1")
+    end
+  end
+end
+import ".depends.mf"
+
+task :clean do
+  sh "rm -rf #{BUILD_DIR} #{BINARY} #{GHOST_SOURCES.join(' ')} .depends.mf"
+end
+
+task :default => BINARY
+
+file BINARY => OBJECTS do |t|
+  sh "gcc #{CFLAGS} -o #{t.name} #{t.prerequisites.join(' ')}"
+end
+
+OBJECTS.each do |o|
+  file o => BUILD_DIR do |t|
+    sh "gcc #{CFLAGS} -c -o #{t.name} #{t.prerequisites[1]}"
+  end
+end
+
+directory BUILD_DIR

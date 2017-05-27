@@ -1,0 +1,6 @@
+(use extras)
+(include "./src/check.scm")
+(printf "enter code:~N~!")
+(define code (read-line))
+(set! sum (check code))
+(printf "sum is ~S~N~!" sum)

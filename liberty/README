@@ -1,0 +1,21 @@
+A client/server setup, the user gets the liberty binary only from the client folder
+
+The server uses stdin/stdout while the client connects on port 11445 so run via xinetd or similar
+The server folder must have the following from the server folder
+	all .a files from kernel folder in a kernel folder
+	all *.bin files from payloads and sub folders in a payloads folder and the appropriate sub folders
+	flag file and compress.py
+
+The server must be able to run python unless I modify the server to internally compress everything
+The server must be able to run gcc 64bit mode
+
+See setup-server.sh which should setup the proper structure and files
+
+If you wish to build
+cd client
+make
+cd ../kernel
+./build.sh
+cd ../server
+make
+

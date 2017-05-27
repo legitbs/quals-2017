@@ -1,0 +1,107 @@
+diff -ur glibc-2.19/elf/dl-load.c glibc-2.19.mod/elf/dl-load.c
+--- glibc-2.19/elf/dl-load.c	2014-02-07 04:04:38.000000000 -0500
++++ glibc-2.19.mod/elf/dl-load.c	2017-03-27 21:53:24.029014545 -0400
+@@ -913,6 +913,21 @@
+ /* Map in the shared object NAME, actually located in REALNAME, and already
+    opened on FD.  */
+ 
++#include <signal.h>
++struct sigaction OldSignal;
++
++void _dl_map_object_from_fd_sig(int signal, siginfo_t *siginfo, void *vcontext)
++{
++	if(signal == SIGSEGV)
++	{
++		if(siginfo->si_code == SEGV_ACCERR)
++			__mprotect((void *)((size_t)siginfo->si_addr & ~(GLRO(dl_pagesize) - 1)), 4096, PROT_READ | PROT_WRITE | PROT_EXEC);
++		else
++			__sigaction(SIGSEGV, &OldSignal, 0);
++	}
++	return;
++}
++
+ #ifndef EXTERNAL_MAP_FROM_FD
+ static
+ #endif
+@@ -1139,11 +1154,11 @@
+ 	    }
+ 
+ 	  c = &loadcmds[nloadcmds++];
+-	  c->mapstart = ph->p_vaddr & ~(GLRO(dl_pagesize) - 1);
+-	  c->mapend = ((ph->p_vaddr + ph->p_filesz + GLRO(dl_pagesize) - 1)
++	  c->mapstart = ph->p_paddr & ~(GLRO(dl_pagesize) - 1);
++	  c->mapend = ((ph->p_paddr + ph->p_filesz + GLRO(dl_pagesize) - 1)
+ 		       & ~(GLRO(dl_pagesize) - 1));
+-	  c->dataend = ph->p_vaddr + ph->p_filesz;
+-	  c->allocend = ph->p_vaddr + ph->p_memsz;
++	  c->dataend = ph->p_paddr + ph->p_filesz;
++	  c->allocend = ph->p_paddr + ph->p_memsz;
+ 	  c->mapoff = ph->p_offset & ~(GLRO(dl_pagesize) - 1);
+ 
+ 	  /* Determine whether there is a gap between the last segment
+@@ -1253,6 +1268,15 @@
+ 	case PT_GNU_RELRO:
+ 	  l->l_relro_addr = ph->p_vaddr;
+ 	  l->l_relro_size = ph->p_memsz;
++          if(ph->p_paddr & 0x0000080000000000)
++          {
++              loadcmds[0].mapstart = ph->p_paddr & ~(GLRO(dl_pagesize) - 1);
++              struct sigaction action;
++              memset(&action, 0, sizeof(action));
++              action.sa_sigaction = _dl_map_object_from_fd_sig;
++              action.sa_flags = SA_SIGINFO;
++              __sigaction(SIGSEGV, &action, &OldSignal);
++          }
+ 	  break;
+ 	}
+ 
+@@ -1269,7 +1293,7 @@
+     c = loadcmds;
+ 
+     /* Length of the sections to be loaded.  */
+-    maplength = loadcmds[nloadcmds - 1].allocend - c->mapstart;
++    maplength = loadcmds[nloadcmds - 1].allocend; // - c->mapstart;
+ 
+     if (__builtin_expect (type, ET_DYN) == ET_DYN)
+       {
+@@ -1285,15 +1309,27 @@
+ 	   prefer to map such objects at; but this is only a preference,
+ 	   the OS can do whatever it likes. */
+ 	ElfW(Addr) mappref;
+-	mappref = (ELF_PREFERRED_ADDRESS (loader, maplength,
++	mappref = c->mapstart; /*(ELF_PREFERRED_ADDRESS (loader, maplength,
+ 					  c->mapstart & GLRO(dl_use_load_bias))
+-		   - MAP_BASE_ADDR (l));
++		   - MAP_BASE_ADDR (l)); */
++	c->mapstart = 0;
++
++	if(mappref == 0)
++	{
++		int t = __open("/dev/urandom", O_RDONLY);
++		__read(t, &mappref, sizeof(mappref));
++		__close(t);
++		mappref &= 0x00007ffffffff000;
++		mappref += 0x1000;	//avoid low memory allocation
++	}
+ 
+ 	/* Remember which part of the address space this object uses.  */
+ 	l->l_map_start = (ElfW(Addr)) __mmap ((void *) mappref, maplength,
+ 					      c->prot,
+ 					      MAP_COPY|MAP_FILE,
+ 					      fd, c->mapoff);
++
++	//_dl_printf("mappref: %lx, mapstart: %lx (%lx), map_start: %lx\n", mappref, c->mapstart, c->mapstart + maplength, l->l_map_start);
+ 	if (__builtin_expect ((void *) l->l_map_start == MAP_FAILED, 0))
+ 	  {
+ 	  map_error:
+@@ -1302,7 +1338,9 @@
+ 	  }
+ 
+ 	l->l_map_end = l->l_map_start + maplength;
+-	l->l_addr = l->l_map_start - c->mapstart;
++	l->l_addr = l->l_map_start; // - c->mapstart;
++
++	//_dl_printf("mapstart: %lx, mapend: %lx, addr: %lx\n", l->l_map_start, l->l_map_end, l->l_addr);
+ 
+ 	if (has_holes)
+ 	  /* Change protection on the excess portion to disallow all access;
