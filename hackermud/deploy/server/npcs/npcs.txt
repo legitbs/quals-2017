@@ -1,0 +1,368 @@
+Name Codewisp
+Description A wisp of code barely a part of this realm
+Vnum 0
+HP 20
+CPU 5
+Memory 5
+ScriptLevel 2
+CodeLevel 2
+HackLevel 2
+Flags roams
+Equip processor 1 mod
+Inventory 2
+Name Codephage
+Description A powerful codephage can rewrite its entire codebase to adapt to incoming attacks
+Vnum 1
+HP 160
+CPU 100
+Memory 100
+ScriptLevel 5
+CodeLevel 6
+HackLevel 6
+Flags none
+Equip processor 1 mod
+Equip coprocessor 6
+Inventory 2
+Name Code Fragment
+Description A weak fragment of code long forgotten on the Mainframe 
+Vnum 2
+HP 100
+CPU 30
+Memory 30
+ScriptLevel 3
+CodeLevel 3
+HackLevel 3
+Flags none
+Equip card1 15 mod
+Name Vito
+Description A charistmatic program, vito sips bourbon as he winks at you
+Vnum 3
+HP 3000
+CPU 1000
+Memory 1000
+ScriptLevel 20
+CodeLevel 20
+HackLevel 10
+Flags stationary blocksflee extraregen healscript
+Equip card1 3 mod
+Name Duchess
+Description Duchess is casually juggling glowing blue knives; he doesn't seem to notice you
+Vnum 4
+HP 3000
+CPU 1000
+Memory 1000
+ScriptLevel 20
+CodeLevel 20
+HackLevel 10
+Flags roams blocksflee extraregen healscript
+Equip card1 3 mod
+Name Gynophage
+Description Gynophage is floating in the air with his legs crossed and is displeased that you bothered him
+Vnum 5
+HP 3000
+CPU 1000
+Memory 1000
+ScriptLevel 30
+CodeLevel 20
+HackLevel 40
+Flags stationary extraregen damagescript healscript
+Equip card1 3 mod
+Name Jymbolia
+Description Jymbolia looks up from his reflow station/waffle griddle distractedly as you enter. He approaches you waving a soldering iron menacingly
+Vnum 6
+HP 3000
+CPU 1000
+Memory 1000
+ScriptLevel 30
+CodeLevel 20
+HackLevel 20
+Flags stationary damagescript
+Equip card1 3 mod
+Name Selir
+Description Selir looks up from his laptop with kind eyes and asks if you would like help
+Vnum 7
+HP 3000
+CPU 1000
+Memory 1000
+ScriptLevel 30
+CodeLevel 20
+HackLevel 30
+Flags roams extraregen damagescript healscript
+Equip card1 3 mod
+Name Deadwood
+Description Deadwood is hunched over a smoking barbeque grill and says "Are you here for my meat?". When you don't immediately answer, he charges you.
+Vnum 8
+HP 1000
+CPU 5
+Memory 5
+ScriptLevel 3 
+CodeLevel 1
+HackLevel 2
+Flags stationary
+Equip processor 1 mod
+Inventory 2
+Name HJ
+Description HJ is hanging from the ceiling in his 5-finger shoes. He laughs as you enter the room. He pities you.
+Vnum 9
+HP 1000
+CPU 500
+Memory 1000
+ScriptLevel 10
+CodeLevel 20
+HackLevel 20
+Flags roams blocksflee damagescript healscript
+Equip processor 1 mod
+Inventory 2
+Name Hoju
+Description You hear music coming from Hoju's headphones. He smiles at you.
+Vnum 10
+HP 1000
+CPU 5
+Memory 5
+ScriptLevel 1
+CodeLevel 1
+HackLevel 2
+Flags roams extraregen
+Equip processor 1 mod
+Inventory 2
+Name Grumpy
+Description Grumpy looks unhappy that you disturbed her from her reversing.
+Vnum 11
+HP 1000
+CPU 5
+Memory 5
+ScriptLevel 1
+CodeLevel 1
+HackLevel 2
+Flags stationary
+Equip processor 1 mod
+Inventory 2
+Name Lightning
+Description Lightning watches you enter and smiles...you turn away and turn back to see him charge you.
+Vnum 12
+HP 1000
+CPU 5
+Memory 5
+ScriptLevel 1
+CodeLevel 1
+HackLevel 2
+Flags stationary
+Equip processor 1 mod
+Inventory 2
+Name Thing2
+Description A mist in this room coalesces into Thing2
+Vnum 13
+HP 1000
+CPU 5
+Memory 5
+ScriptLevel 1
+CodeLevel 1
+HackLevel 2
+Flags roams
+Equip processor 1 mod
+Inventory 2
+Name Code Gremlin
+Description From the corners of the room creep a herd of gremlins
+Vnum 14
+HP 500
+CPU 5
+Memory 100
+ScriptLevel 8
+CodeLevel 5
+HackLevel 7
+Flags roams damagescript
+Equip processor 12
+Inventory 2
+Name Crontab
+Description A worker thread in the realm responsible for controlling services running
+Vnum 15
+HP 200
+CPU 100
+Memory 400
+ScriptLevel 7 
+CodeLevel 6
+HackLevel 2
+Flags roams flees damagescript healscript
+Equip coprocessor 4
+Name Codesweeper
+Description A defensive service running that attempts to prevent access to critical parts of the system
+Vnum 16
+HP 220
+CPU 150
+Memory 400
+ScriptLevel 9
+CodeLevel 6
+HackLevel 7
+Flags roams flees damagescript
+Equip processor 12
+Equip memory 2
+INVENTORY 5
+Name Gatekeeper
+Description A master service that controls access to multiple facets of this realm
+Vnum 17
+HP 260
+CPU 350
+Memory 350
+ScriptLevel 10
+CodeLevel 10
+HackLevel 11
+Flags roams flees damagescript healscript
+Equip processor 12
+Equip accelerator 9
+Name Server Cleanup Script
+Description A master service that controls access to multiple facets of this realm
+Vnum 18
+HP 150
+CPU 150
+Memory 150
+ScriptLevel 7
+CodeLevel 7
+HackLevel 8
+Flags roams flees healscript
+Inventory 5
+Name Daemon Controller
+Description Conrolling access to peripheral I/O resources
+Vnum 19
+HP 190
+CPU 250
+Memory 350
+ScriptLevel 9
+CodeLevel 9
+HackLevel 5
+Flags roams damagescript
+Equip card1 7
+Equip card2 8
+Name Taskthread
+Description A task thread on the server
+Vnum 20
+HP 150
+CPU 150
+Memory 150
+ScriptLevel 8
+CodeLevel 6
+HackLevel 8
+Flags roams damagescript
+Equip disk 10
+Equip accelerator 9
+Name Simple Subroutine
+Description Simple Process
+Vnum 21
+HP 130
+CPU 150
+Memory 150
+ScriptLevel 4
+CodeLevel 4
+HackLevel 4
+Flags roams damagescript
+Equip memory 2
+Name Beginner Goon
+Description A beginner Goon is here, barely able to comprehend binary
+Vnum 22
+HP 120
+CPU 150
+Memory 150
+ScriptLevel 3
+CodeLevel 2
+HackLevel 6
+Flags roams
+Equip processor 1
+Name Polling Subroutine
+Description A Polling Subroutine that scans the realm for accuracy
+Vnum 23
+HP 130
+CPU 150
+Memory 150
+ScriptLevel 5
+CodeLevel 5
+HackLevel 5
+Flags roams
+Equip coprocessor 4
+INVENTORY 5
+Name Zombie Process
+Description A zombie process, stranded in the realm without a parent, wanders slowly
+Vnum 24
+HP 80
+CPU 120
+Memory 200
+ScriptLevel 3
+CodeLevel 4
+HackLevel 6
+Flags None
+Equip card2 8
+INVENTORY 5
+Name Shell Monitor
+Description A shell monitoring script that manages the system
+Vnum 25
+HP 180
+CPU 200
+Memory 250
+ScriptLevel 6
+CodeLevel 6
+HackLevel 7
+Flags healscript
+Equip card1 7
+Equip memory 14
+INVENTORY 5
+Name SirGoon
+Description The creator of the realm
+Vnum 26
+HP 4000
+CPU 4000
+Memory 4000
+ScriptLevel 30
+CodeLevel 30
+HackLevel 30
+Flags healscript damagescript extraregen
+Equip card1 7 mod
+Equip card2 8 mod
+Equip accelerator 9 mod
+INVENTORY 5
+Name Aggressive Code Filter
+Description An aggressive subroutine that filters any malicious code on the server
+Vnum 27
+HP 130
+CPU 400
+Memory 300
+ScriptLevel 8
+CodeLevel 8
+HackLevel 8
+Flags damagescript aggressive attackonenter
+Equip memory 14
+INVENTORY 5
+Name Virus Scanner
+Description An aggressive subroutine that scans for viruses in code on the server
+Vnum 28
+HP 50
+CPU 400
+Memory 400
+ScriptLevel 10
+CodeLevel 10
+HackLevel 10
+Flags roams damagescript aggressive
+Equip disk 17
+INVENTORY 5
+Name Adept Hacker
+Description An adept hacker in the realm
+Vnum 29
+HP 80
+CPU 400
+Memory 400
+ScriptLevel 8
+CodeLevel 6
+HackLevel 7
+Flags roams damagescript aggressive
+Equip disk 11
+Equip coprocessor 6
+Name Lost Code Block
+Description A lost code block
+Vnum 30
+HP 250
+CPU 400
+Memory 400
+ScriptLevel 13
+CodeLevel 12
+HackLevel 12
+Flags roams
+Equip disk 11
+Equip coprocessor 6
+INVENTORY 5

@@ -1,0 +1,23 @@
+import sla_noexploit
+#change elements in list to select which sla check gets exercised
+
+
+# RUN THIS SCRIPT UNCOMMENTING AND COMMENTING THE LINES IN THE ORDER IN WHICH THEY APPEAR
+# TALK TO SIRGOON
+
+
+# THIS IS THE FIRST ROUND OF SLA CHECKS BELOW.  UNCOMMENT TO START SLA CHECKS WITHOUT
+# EXPLOITABLE BINARY
+#slaList=(sla_noexploit.sla_rc4,sla_noexploit.sla_sha256,sla_noexploit.sla_echo)
+
+# THIS IS THE SECOND ROUND OF SLA CHECKING.  UNCOMMENT THIS LINE BELOW (and comment line above)
+# TO SEND THE EXPLOITABLE SLA CHECK TO ALL THE TEAMS IN THE SAME SLA WINDOW
+# THIS SHOULD RUN FOR 2 SLA CHECK PERIODS
+slaList=(sla_noexploit.sla_lzss,)
+
+# THIS IS THE LAST ROUND AFTER TWO ROUNDS OF THE LINE ABOVE.  COMMENT OUT THE ABOVE LINES AND UNCOMMENT THE LINE BELOW
+# THIS WILL RANDOMLY SEND ALL THE SLA CHECKS TO THE TEAMS
+#slaList=(sla_noexploit.sla_lzss,sla_noexploit.sla_rc4,sla_noexploit.sla_sha256,sla_noexploit.sla_echo)
+
+# LEAVE THE LINE BELOW ALONE
+timeout = 10

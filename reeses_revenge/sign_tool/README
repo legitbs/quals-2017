@@ -1,0 +1,3 @@
+sign_tool:
+
+This tool is used to build signed reeses loader files.  These files are needed by reeses to run MIPS code in the Emulator.  Use the priv.key file to sign them.  The public key (pub.key) is hard coded into the Emulator.  It will only run signed code.

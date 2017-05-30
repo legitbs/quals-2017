@@ -1,0 +1,46 @@
+#ifndef __MMU_H__
+#define __MMU_H__
+
+// Memory access types
+// MEMACC_INSTFETCH		-- Memory access because of an instruction fetch
+// MEMACC_DATALOAD		-- Memory access because of a load instruction
+// MEMACC_DATASTORE		-- Memory access due to a store instruction
+// MEMACC_ANY			-- Catch all for exception handling
+#define MEMACC_INSTFETCH	0
+#define MEMACC_DATALOAD		1
+#define MEMACC_DATASTORE	2
+#define MEMACC_ANY			3
+
+#define PAGETABLE_SIZE		4096
+
+class CCPU;
+
+class CMMU
+{
+public:
+	CMMU();
+	~CMMU();
+
+	// This simple MMU only supports a contiguous region of pages!
+	bool Setup( uint32_t baseAddress, uint32_t endAddress );
+
+	// Now copy in page data (note setup should have been called first!!)
+	bool WriteMemory( uint32_t address, uint8_t *pData, uint32_t length );
+
+	bool ReadMemory( uint32_t address, uint8_t *pData, uint32_t length  );
+
+	uint32_t fetchWord( uint32_t addr, uint8_t memaccType, CCPU *pCPU );
+	uint16_t fetchHalfword( uint32_t addr, uint8_t memaccType, CCPU *pCPU );
+	uint8_t fetchByte( uint32_t addr, uint8_t memaccType, CCPU *pCPU );
+
+	void storeWord( uint32_t addr, uint32_t value, CCPU *pCPU );
+	void storeHalfword( uint32_t addr, uint16_t value, CCPU *pCPU );
+	void storeByte( uint32_t addr, uint8_t value, CCPU *pCPU );
+
+private:
+	uint32_t	m_baseAddress;
+	uint8_t		*m_pMemory;
+	uint32_t	m_memSize;
+};
+
+#endif // __MMU_H__

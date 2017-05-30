@@ -1,0 +1,12 @@
+Deploy Port: 5050
+Internet: This service should not be accessible by the competitors only via the client container
+
+Deploy instructions
+
+Run in an infinite loop so that when it reboots (or possibly crashes) it auto restarts
+
+Run with ./hackserver 3600
+
+The server will automatically restart itself every hour in this mode
+
+Please enable it so that it can generate a core dump so it is crashing I can review and possibly fix the server as the game is ongoing!

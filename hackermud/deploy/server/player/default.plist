@@ -1,0 +1,17 @@
+Name default
+PasswordHash 00000000000000000000000000000000
+Description A competitor in the realm of DEF CON Capture The Flag
+Room 100
+HP 200
+CPU 100
+Memory 200
+MAXHP 200
+MAXCPU 100
+MAXMemory 200
+ScriptLevel 1
+CodeLevel 1
+HackLevel 1
+MaxItems 32
+MaxDisk 1000
+CurItems 0
+CurDisk 0

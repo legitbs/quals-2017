@@ -1,0 +1,17 @@
+CC=g++
+CCFLAGS=-g3 -O1 -Wall -w -pedantic -fmessage-length=0 -fno-stack-protector -pie -fPIE -m64 -s
+
+O_FILES = CommonFile.o cpu.o crypto.o mebloader.o mmu.o syscall_handler.o RC4Coprocessor.o mpes.o
+
+reeses : $(O_FILES)
+	$(CC) $(CCFLAGS) -o reeses $(O_FILES) -lcrypto
+
+# dependency stuff, see: http://www.cs.berkeley.edu/~smcpeak/autodepend/autodepend.html
+# pull in dependency info for *existing* .o files
+-include $(O_FILES:.o=.d)
+
+.SUFFIXES : .o .cpp
+
+.cpp.o :  
+	$(CC) $(CCFLAGS) -c $<
+	$(CC) -MM $(CFLAGS) $*.cpp > $*.d

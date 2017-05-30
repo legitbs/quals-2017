@@ -1,0 +1,238 @@
+Name Common CPU
+BriefDescription Common Central Processor
+Description A very low budget common central processor with limited functionality
+Vnum 1
+Flags none
+Type equip
+Equip Processor
+Disk 60
+Script 1
+Code 1
+Hack 1
+HP 0
+CPU 50
+Memory 0
+Name Cheap RAM
+BriefDescription Low budget memory
+Description A very low budget memory module with limited functionality
+Vnum 2
+Flags none
+Type equip
+Equip Memory
+Disk 60
+Script 1
+Code 1
+Hack 1
+HP 0
+CPU 0
+Memory 50
+Name Bottle of Bourbon
+BriefDescription A classy bottle of Bourbon
+Description This classy bottle of Bourbon gives one unprecendented power
+Vnum 3
+Flags pkdrop exitdrop
+Type equip
+Equip card1
+Disk 20
+Script 1
+Code 0
+Hack 0
+HP 100
+CPU 0
+Memory 0
+Name Low-end Floating Point Coprocessor
+BriefDescription A low-end floating point coprocessor
+Description An underwhelming performer, this low end coprocessor barely boosts CPU performance at a cost to memory usage
+Vnum 4
+Flags pkdrop exitdrop
+Type equip
+Equip coprocessor
+Disk 60
+Script 1
+Code 1
+Hack 0
+HP -1
+CPU 50
+Memory -10
+Name Finger Request Script
+BriefDescription A Finger Request Script for the Server
+Description A coded script that grants access to the server to run 1 finger request command
+Vnum 5
+Flags pkdrop exitdrop fingerrequest
+Type script
+Disk 10
+Script 0
+Code 0
+Hack 0
+HP 0
+CPU 0
+Memory 0
+ScriptUse 1
+Name Low performance SIMD Coprocessor
+BriefDescription A low performing SIMD coprocessor for basic systems
+Description A low performing SIMD coprocessor made for basic systems accelerating processing power and adds very little Memory
+Vnum 6
+Flags none
+Type equip
+Equip coprocessor
+Disk 60
+Script 2
+Code 3
+Hack 1
+HP -5
+CPU 100
+Memory -5
+Name Defense Enhancer Card
+BriefDescription A low end card that enhances your defense
+Description A low performing card for slot 1 that enhances your defense by adding HP
+Vnum 7
+Flags none
+Type equip
+Equip card1
+Disk 60
+Script 2
+Code 3
+Hack 1
+HP 150
+CPU -5
+Memory -5
+Name Defense Boost Card
+BriefDescription A medium duty card for boosting your defense
+Description A basic card for slot 2 that boosts your defensive power increasing your HP
+Vnum 8
+Flags none
+Type equip
+Equip card2
+Disk 60
+Script 2
+Code 1
+Hack 1
+HP 150
+CPU -5
+Memory -5
+Name State of the Art Processor Accelerator Card
+BriefDescription A state of the art accelerator card
+Description A state of the art accelerator card
+Vnum 9
+Flags pkdrop exitdrop
+Type equip
+Equip accelerator
+Disk 148
+Script 5
+Code 6
+Hack 4
+HP -5
+CPU 200
+Memory 200
+Name Basic Storage Device
+BriefDescription A basic storage device
+Description A basic disk for increasing storage, boosts Memory and HP slightly
+Vnum 10
+Flags none
+Type equip
+Equip disk
+Disk 10
+Script 2
+Code 1
+Hack 1
+HP 10
+CPU 0
+Memory 50
+Name Dominator Phase-Change Disk
+BriefDescription A unique storage device
+Description A dominator disk that uses phase changing memory for performance
+Vnum 11
+Flags none
+Type equip
+Equip disk
+Disk 60
+Script 3
+Code 5
+Hack 3
+HP -10
+CPU -10
+Memory 100
+Name Advanced CPU
+BriefDescription Advanced Central Processor
+Description An advanced Central Processor that incorporates newer generation technology affording extra compute power
+Vnum 12
+Flags none
+Type equip
+Equip Processor
+Disk 60
+Script 5
+Code 8
+Hack 5
+HP -1
+CPU 150
+Memory 10
+Name Next Generation CPU
+BriefDescription Next Generation Processor
+Description A state of the art Central Processor that incorporates the latest generation technology affording unprecedented compute power
+Vnum 13
+Flags none
+Type equip
+Equip Processor
+Disk 100
+Script 8
+Code 12
+Hack 8
+HP 5
+CPU 200
+Memory 20
+Name Dominator RAM
+BriefDescription Advanced Random Access Memory
+Description Advanced Random Access Memory that provides a significant boost to memory
+Vnum 14
+Flags pkdrop nodestroy
+Type equip
+Equip Memory
+Disk 60
+Script 5
+Code 7
+Hack 4
+HP -5
+CPU 0
+Memory 130
+Name Cheap Defense Booster
+BriefDescription A cheap card used for boosting your defenses
+Description A cheap card used for boosting your defenses
+Vnum 15
+Flags none
+Type equip
+Equip card1
+Disk 60
+Script 2
+Code 2
+Hack 1
+HP 50
+CPU 0
+Memory 0
+Name Cheap Defense Booster 2
+BriefDescription A cheap card use for boosting your defenses
+Description A cheap card that provides a very small boost to your defenses
+Vnum 16
+Flags none
+Type equip
+Equip card2
+Disk 60
+Script 2
+Code 1
+Hack 1
+HP 50
+CPU 0
+Memory 0
+Name Cheap Disk
+BriefDescription A cheap disk
+Description A cheap disk that boosts memory
+Vnum 17
+Flags none
+Type equip
+Equip disk
+Disk 60
+Script 2
+Code 2
+Hack 1
+HP 0
+CPU 0
+Memory 50

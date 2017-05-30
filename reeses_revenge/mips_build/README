@@ -1,0 +1,3 @@
+EXAMPLE COMPILE:
+
+/usr/local/mipsel-none-elf/bin/mipsel-none-elf-gcc -nostdlib -march=mips32 sha256.c test.c

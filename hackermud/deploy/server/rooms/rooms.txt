@@ -1,0 +1,1111 @@
+Name Root Directory
+ShortDescription Root Directory of Server
+Description The root directory of the server, the starting place of this realm
+Vnum 182
+Zone 1
+Flags none
+North 183
+Name Inside the Mainframe
+ShortDescription Somewhere inside the Mainframe
+Description Lost inside the mainframe, this long hallway continues ahead to the north
+Vnum 183
+Zone 1
+Flags none
+South 182
+East 101
+Name Root Directory
+ShortDescription Root Directory of Server
+Description The root directory of the server, the starting place of this realm
+Vnum 180
+Zone 1
+Flags none
+North 181
+Name Inside the Mainframe
+ShortDescription Somewhere inside the Mainframe
+Description Lost inside the mainframe, this long hallway continues ahead to the north
+Vnum 181
+Zone 1
+Flags none
+South 180
+West 101
+Name Root Directory
+ShortDescription Root Directory of Server
+Description The root directory of the server, the starting place of this realm
+Vnum 100
+Zone 1
+Flags none
+North 101
+Name Inside the Mainframe
+ShortDescription Somewhere inside the Mainframe
+Description Lost inside the mainframe, this long hallway continues ahead to the north
+Vnum 101
+Zone 1
+Flags None
+North 102
+South 100
+East 181
+West 183
+Name Inside the Mainframe
+ShortDescription Somewhere inside the Mainframe
+Description Lost inside the mainframe, this long hallway continues ahead to the north
+Vnum 102
+Zone 1
+Flags None
+North 103
+South 101
+Name Inside the Mainframe
+ShortDescription Somewhere inside the Mainframe
+Description Lost inside the mainframe, this long hallway continues ahead to the north
+Vnum 103
+Zone 1
+Flags None
+North 150
+South 102
+Name Deep in the Mainframe
+ShortDescription Deeper inside the core of the Mainframe
+Description This area is surrounded by printed circuit boards and integral components of the Mainframe, the inner core of the system
+Vnum 150
+Zone 1
+Flags None
+South 102
+North 402
+East 200
+West 300
+Name Inside the Central Processor
+ShortDescription Inside the Central Processor
+Description This is one of the Central Processors inside the Mainframe, circuits bounce off the room as electrons pass by
+Vnum 200
+Zone 2
+Flags None
+West 150
+East 201
+Name Inside the Central Processor
+ShortDescription Inside the Central Processor
+Description This is one of the Central Processors inside the Mainframe, circuits bounce off the room as electrons pass by
+Vnum 201
+Zone 2
+Flags None
+West 200
+East 202
+Name Inside the Central Processor
+ShortDescription Inside the Central Processor
+Description This is one of the Central Processors inside the Mainframe, circuits bounce off the room as electrons pass by
+Vnum 202
+Zone 2
+Flags None
+West 201
+East 203
+Name Inside the Central Processor
+ShortDescription Inside the Central Processor
+Description This is one of the Central Processors inside the Mainframe, circuits bounce off the room as electrons pass by
+Vnum 203
+Zone 2
+Flags None
+North 204
+South 230
+West 202
+Name Entering the DEF CON Network
+ShortDescription Inside the DEF CON Network
+Description This is one of the links to the DEF CON Network in the realm
+Vnum 204
+Zone 2
+Flags None
+South 203
+East 205
+Name DEF CON Newbies Corridor
+ShortDescription Corridor for Newbies
+Description This is where the DEF CON Newbies hang out wondering how to hack the realm
+Vnum 205
+Zone 2
+Flags None
+West 204
+East 206
+Name DEF CON Newbies Corridor
+ShortDescription Corridor for Newbies
+Description This is where the DEF CON Newbies hang out wondering how to hack the realm
+Vnum 206
+Zone 2
+Flags None
+West 205
+East 207
+Name DEF CON Newbies Corridor
+ShortDescription Corridor for Newbies
+Description This is where the DEF CON Newbies hang out wondering how to hack the realm
+Vnum 207
+Zone 2
+Flags None
+West 206
+East 208
+Name Bend in the Corridor
+ShortDescription The Corridor bends here
+Description There is a large bend in the corridor connecting the DEF CON Network
+Vnum 208
+Zone 2
+Flags None
+West 207
+South 209
+Name DEF CON Goon Labs
+ShortDescription Goon Labs
+Description Disgruntled Goons huddle in this portion of the realm
+Vnum 209
+Zone 2
+Flags None
+North 208
+South 210
+Name DEF CON Goon Labs
+ShortDescription Goon Labs
+Description Disgruntled Goons huddle in this portion of the realm
+Vnum 210
+Zone 2
+Flags None
+North 209
+East 211
+West 212
+South 213
+Name DEF CON Goon Labs
+ShortDescription Goon Labs
+Description Disgruntled Goons huddle in this portion of the realm
+Vnum 211
+Zone 2
+Flags None
+West 210
+South 214
+Name DEF CON Goon Labs
+ShortDescription Goon Labs
+Description Disgruntled Goons huddle in this portion of the realm
+Vnum 212
+Zone 2
+Flags None
+East 210
+South 215
+Name DEF CON Goon Labs
+ShortDescription Goon Labs
+Description Disgruntled Goons huddle in this portion of the realm
+Vnum 213
+Zone 2
+Flags None
+North 210
+South 220
+East 214
+West 215
+Name DEF CON Goon Labs
+ShortDescription Goon Labs
+Description Disgruntled Goons huddle in this portion of the realm
+Vnum 214
+Zone 2
+Flags None
+North 211
+West 213
+Name DEF CON Goon Labs
+ShortDescription Goon Labs
+Description Disgruntled Goons huddle in this portion of the realm
+Vnum 215
+Zone 2
+Flags None
+North 212
+East 213
+Name Hallway of Humans
+ShortDescription Hallway of Humans
+Description A hallway devoted to humans of the realm it intersects back with the main network
+Vnum 220
+Zone 2
+Flags None
+North 213
+South 221
+Name Hallway of Humans
+ShortDescription Hallway of Humans
+Description A hallway devoted to humans of the realm it intersects back with the main network
+Vnum 221
+Zone 2
+Flags None
+North 220
+South 222
+Name Bend in the Hallway
+ShortDescription Bend in the Hallway
+Description The hallway bends here lost in a myriad of binary corruption
+Vnum 222
+Zone 2
+Flags None
+North 221
+West 223
+Name Hallway of Humans
+ShortDescription Hallway of Humans
+Description A hallway devoted to humans of the realm it intersects back with the main network
+Vnum 223
+Zone 2
+Flags None
+East 222
+West 224
+Name Hallway of Humans
+ShortDescription Hallway of Humans
+Description A hallway devoted to humans of the realm it intersects back with the main network
+Vnum 224
+Zone 2
+Flags None
+East 223
+West 230
+Name Southern Entrance
+ShortDescription South most Entrance
+Description An entrance from the south side of the Network
+Vnum 230
+Zone 2
+Flags None
+North 203
+East 224
+Name Corridor to the Lounge
+ShortDescription A short corridor to the lounge area within the realm
+Description A short corridor to the lounge area within the realm
+Vnum 300
+Zone 3
+Flags none
+East 150
+West 301
+Name Corridor to the Lounge
+ShortDescription A short corridor to the lounge area within the realm
+Description A short corridor to the lounge area within the realm
+Vnum 301
+Zone 3
+Flags none
+East 300
+West 302
+Name Lounge Area
+ShortDescription A short corridor to the lounge area within the realm
+Description A short corridor to the lounge area within the realm
+Vnum 302
+Zone 3
+Flags none
+East 301
+West 303
+Name DEF CON Lounge
+ShortDescription Lounge area for DEF CON
+Description A lounge area for DEF CON
+Vnum 303
+Zone 3
+Flags none
+East 302
+West 304
+Name DEF CON Lounge
+ShortDescription Lounge area for DEF CON
+Description A lounge area for DEF CON
+Vnum 304
+Zone 3
+Flags none
+North 306
+East 303
+West 305
+South 307
+Name DEF CON Lounge
+ShortDescription Lounge area for DEF CON
+Description A lounge area for DEF CON
+Vnum 305
+Zone 3
+Flags none
+North 310
+East 304
+South 311
+Name DEF CON Lounge
+ShortDescription Lounge area for DEF CON
+Description A lounge area for DEF CON
+Vnum 306
+Zone 3
+Flags none
+South 304
+Name DEF CON Lounge
+ShortDescription Lounge area for DEF CON
+Description A lounge area for DEF CON
+Vnum 307
+Zone 3
+Flags none
+North 304
+Name LegitBS Office
+ShortDescription Office for LegitBS
+Description An office area for Legitimate Business Syndicate
+Vnum 310
+Zone 3
+Flags none
+South 305
+Name SirGoon's Office
+ShortDescription Office for SirGoon
+Description The office for LegitBS member SirGoon, creator of the HackerMUD realm
+Vnum 311
+Zone 3
+Flags none
+North 305
+Name Southbridge
+ShortDescription A large warehouse contains a bussling variety of data flowing in every direction.
+Description A large warehouse contains a bussling variety of data flowing in every direction.
+Vnum 401
+Zone 4 
+Flags pk
+North 403
+South 402
+East 404
+West 419
+Up 420
+Down 409
+Name Media
+ShortDescription You see soundwaves bouncing and pictures flashing on the walls as they quickly pass by.
+Description You see soundwaves bouncing and pictures flashing on the walls as they quickly pass by.
+Vnum 402
+Zone 4
+Flags pk
+North 403
+South 102
+East 405
+West 406
+Name Ethernet Controller
+ShortDescription You walk on a tangle of ethernet cables coiled on the floor. All walls are covered in RJ-45 ports.
+Description You walk on a tangle of ethernet cables coiled on the floor. All walls are covered in RJ-45 ports.
+Vnum 404
+Zone 4
+Flags pk
+East 1101
+West 401
+Name Ethernet Cable
+ShortDescription A long tunnel twists into the distance.
+Description A long tunnel twists into the distance.
+Vnum 1101
+Zone 11
+Flags pk
+East 1102
+West 404
+Name Ethernet Cable
+ShortDescription A long tunnel twists into the distance.
+Description A long tunnel twists into the distance.
+Vnum 1102
+Zone 11
+Flags pk
+East 1103
+West 1101
+Name Ethernet Cable
+ShortDescription A long tunnel twists into the distance.
+Description A long tunnel twists into the distance.
+Vnum 1103
+Zone 11
+Flags pk
+East 1010
+West 1102
+Name Audio Board
+ShortDescription The room is dimly lit with sounds echoing around a large, open room.
+Description The room is dimly lit with sounds echoing around a large, open room.
+Vnum 405 
+Zone 4
+Flags pk
+South 408
+West 402
+Name Video Board
+ShortDescription Faces, photos, and movies show on all surfaces. You see the user's cursor streaming a string of ascii behind it.
+Description Faces, photos, and movies show on all surfaces. You see the user's cursor streaming a string of ascii behind it.
+Vnum 406
+Zone 4
+Flags pk
+South 407
+East 402
+Name Monitor
+ShortDescription Pixels are everywhere. Each wall is covered with pictures of cute cats.
+Description Pixels are everywhere. Each wall is covered with pictures of cute cats.
+Vnum 407
+Zone 4
+Flags pk
+North 406
+Name Speakers
+ShortDescription You see a knob on the wall that goes up to 11. It has been turned to 11 and nailed there.
+Description You see a knob on the wall that goes up to 11. It has been turned to 11 and nailed there.
+Vnum 408
+Zone 4
+Flags pk
+North 405
+Name IO Bank
+ShortDescription A large concentration of digital traffic flows from a port in each wall.
+Description A large concentration of digital traffic flows from a port in each wall.
+Vnum 409
+Zone 4
+Flags pk
+North 410
+South 415
+East 416
+West 417
+Up 401
+Name IDE
+ShortDescription Hard drive manuals and digital schematics line shelves on the wall. 
+Description Hard drive manuals and digital schematics line shelves on the wall.
+Vnum 410
+Zone 4
+Flags pk
+South 409
+East 413
+West 412
+Up 411
+Name Hard Disk Drive
+ShortDescription The floor rotates quickly; you have to step quickly so that the read/write arm doesn't trip you.
+Description The floor rotates quickly; you have to step quickly so that the read/write arm doesn't trip you.
+Vnum 411
+Zone 4
+Flags pk
+Down 410
+Name CD/DVD 
+ShortDescription You can see the centrifugal forces...or are they centripetal?...pulling loose items to the walls. Light bounces off the silvery floor.
+Description You can see the centrifugal forces, or are they centripetal?, pulling loose items to the walls. Light bounces off the silvery floor.
+Vnum 412
+Zone 4
+Flags pk
+East 410
+Name SATA Controller
+ShortDescription ATAPI and ATA legacy manuals litter the floor with doodles and and crude drawings covering them.
+Description ATAPI and ATA legacy manuals litter the floor with doodles and and crude drawings covering them.
+Vnum 413
+Zone 4
+Flags pk
+South 414
+West 410
+Name Solid State Disk
+ShortDescription A sign on wall reads "No spinning!". Dozens of flash banks are plugged into all surfaces
+Description A sign on wall reads "No spinning!". Dozens of flash banks are plugged into all surfaces
+Vnum 414
+Zone 4
+Flags pk
+North 413
+Name Serial
+ShortDescription A nice, old room sports antique furniture and nicely framed art. This has been around for a while.
+Description A nice, old room sports antique furniture and nicely framed art. This has been around for a while.
+Vnum 415
+Zone 4
+Flags pk
+North 409
+Name Parallel
+ShortDescription You see seven copies of yourself enter the same room to the left and right. 
+Description You see seven copies of yourself enter the same room to the left and right.
+Vnum 416
+Zone 4
+Flags pk
+North 409
+East 418
+West 416
+Name USB
+ShortDescription The floor is covered in tiles of varying shapes: circles, triangles, and squares. Various port configurations line the walls.
+Description The floor is covered in tiles of varying shapes: circles, triangles, and squares. Various port configurations line the walls.
+Vnum 417
+Zone 4
+Flags pk
+North 421
+South 424
+East 416
+West 423
+Up 422
+Name Dot matrix printer
+ShortDescription You hear the calming noise of printing paper. You are carried across the floor by spiked drums.
+Description You hear the calming noise of printing paper. You are carried across the floor by spiked drums.
+Vnum 418
+Zone 4
+Flags pk
+West 416
+Name CMOS and Clock
+ShortDescription A battery mounted on the wall provides a trickle of constant energy to the sound of a metronome.
+Description A battery mounted on the wall provides a trickle of constant energy to the sound of a metronome.
+Vnum 419
+Zone 4
+Flags pk
+East 401
+Name BIOS
+ShortDescription Stone tablets line one wall detailing the initial state of the system.
+Description Stone tablets line one wall detailing the initial state of the system.
+Vnum 420
+Zone 4
+Flags pk
+Down 401
+Name Mouse
+ShortDescription Red lasers shine down from the ceiling. So many DPI.
+Description Red lasers shine down from the ceiling. So many DPI.
+Vnum 421
+Zone 4
+Flags pk
+South 417
+Name Keyboard 
+ShortDescription The constant clickity-clack of a mechanical keyboard from the next room sounds annoying.
+Description The constant clickity-clack of a mechanical keyboard from the next room sounds annoying.
+Vnum 422
+Zone 4
+Flags pk
+Down 417
+Name Camera
+ShortDescription You see a fish-eye view of a person typing at a keyboard displayed on the ceiling. They appear to be watching you.
+Description You see a fish-eye view of a person typing at a keyboard displayed on the ceiling. They appear to be watching you.
+Vnum 423
+Zone 4
+Flags pk
+East 417
+Name Microphone
+ShortDescription You hear the steady breathing and keyboard noises of the user sitting at this Server.
+Description You hear the steady breathing and keyboard noises of the user sitting at this Server.
+Vnum 424
+Zone 4
+Flags pk
+North 417
+Name Northbridge
+ShortDescription The control hub for the CPU, RAM, and GPU bustles with high-speed traffic. Watch your feet.
+Description The control hub for the CPU, RAM, and GPU bustles with high-speed traffic. Watch your feet.
+Vnum 403
+Zone 4
+Flags pk
+North 429
+South 401
+East 426
+Name RAM Controller
+ShortDescription Remember the last time you were here? Hmmm, maybe you lost power for a minute.
+Description Remember the last time you were here? Hmmm, maybe you lost power for a minute.
+Vnum 426
+Zone 4
+Flags pk
+North 427
+South 428
+West 403
+Name RAM Bank 1
+ShortDescription Sign says "Quiet, the Gremlin is concentrating." The RAM gremlin sits in the corner holding all of the memory gates open through sheer concentration.
+Description Sign says "Quiet, the Gremlin is concentrating." The RAM gremlin sits in the corner holding all of the memory gates open through sheer concentration.
+Vnum 427
+Zone 4
+Flags pcspawn
+South 426
+Name RAM Bank 2
+ShortDescription Random points of light flit around the room. Sign says "Don't get in his way." The Flash runs around the room with a ping pong paddle keeping the balls of light up in the air.
+Description Random points of light flit around the room. Sign says "Don't get in his way." The Flash runs around the room with a ping pong paddle keeping the balls of light up in the air.
+Vnum 428
+Zone 4
+Flags pcspawn
+North 426
+Name CPU Core 1
+ShortDescription Streams of opcodes flow between the ALU, registers, and processor. You look down and see you got some opcodes stuck to your shoes. 
+Description Streams of opcodes flow between the ALU, registers, and processor. You look down and see you got some opcodes stuck to your shoes. 
+Vnum 429
+Zone 4
+Flags pk
+North 430
+South 403
+East 432
+West 431
+Up 433
+Down 434
+Name CPU Core 4
+ShortDescription Streams of opcodes flow between the ALU, registers, and processor. You look down and see you got some opcodes stuck to your shoes. 
+Description Streams of opcodes flow between the ALU, registers, and processor. You look down and see you got some opcodes stuck to your shoes. 
+Vnum 430
+Zone 4
+Flags pcspawn
+South 429
+Name CPU Core 3
+ShortDescription Streams of opcodes flow between the ALU, registers, and processor. You look down and see you got some opcodes stuck to your shoes. 
+Description Streams of opcodes flow between the ALU, registers, and processor. You look down and see you got some opcodes stuck to your shoes. 
+Vnum 431
+Zone 4
+Flags pcspawn
+East 429
+Name CPU Core 2
+ShortDescription Streams of opcodes flow between the ALU, registers, and processor. You look down and see you got some opcodes stuck to your shoes. 
+Description Streams of opcodes flow between the ALU, registers, and processor. You look down and see you got some opcodes stuck to your shoes. 
+Vnum 432
+Zone 4
+Flags pcspawn
+West 429
+Name Register Banks
+ShortDescription Like a train station's flipboard, each register's contents are displayed on the way. They set and reset to various numbers so fast you can't make out their values.
+Description Like a train station's flipboard, each register's contents are displayed on the way. They set and reset to various numbers so fast you can't make out their values.
+Vnum 433
+Zone 4
+Flags pcspawn
+Down 429
+Name L3 Cache
+ShortDescription Chunks of data fly into this room through glowing ports on the walls, stay for nanoseconds, and then fly back out the door they entered.
+Description Chunks of data fly into this room through glowing ports on the walls, stay for nanoseconds, and then fly back out the door they entered.
+Vnum 434
+Zone 4
+Flags pcspawn
+Up 429
+Name Tricorder Waveform Processor
+ShortDescription Advanced algorithms display in holograms around the room.
+Description Advanced algorithms display in holograms around the room.
+Vnum 501
+Zone 5
+Flags pk
+North 505
+South 507
+East 502
+West 506
+Up 901
+Name Tricorder Universal Translator
+ShortDescription Numerous languages steam through the air as the hundreds of scribes lining the walls write down the Common translation.
+Description Numerous languages steam through the air as the hundreds of scribes lining the walls write down the Common translation.
+Vnum 502
+Zone 5
+Flags pk
+East 503
+West 501
+Name Tricorder Lifeform Sensor 
+ShortDescription A doplar ping sweeps around the room with a green light.
+Description A doplar ping sweeps around the room with a green light.
+Vnum 503
+Zone 5
+Flags pk
+South 504
+West 502
+Name Tricorder Sensor Probe
+ShortDescription The gray room contains many long, rounded sensors lining the walls.
+Description The gray room contains many long, rounded sensors lining the walls.
+Vnum 504
+Zone 5
+Flags pk
+North 503
+West 505
+Name Tricorder Holographic Projector
+ShortDescription You are surrounded by floating players. Some look at you curiously while others hurl attacks at you.
+Description You are surrounded by floating players. Some look at you curiously while others hurl attacks at you.
+Vnum 505
+Zone 5
+Flags pk
+South 501
+East 504
+West 507
+Name Tricorder Storage Matrix
+ShortDescription Advanced mega-neuron-matrix nodes are scattered around the room giving off a purple glow.
+Description Advanced mega-neuron-matrix nodes are scattered around the room giving off a purple glow.
+Vnum 506
+Zone 5
+Flags pk
+East 501
+Name Tricorder Screen
+ShortDescription Green and blue biometric and energy readings scroll down the walls.
+Description Green and blue biometric and energy readings scroll down the walls.
+Vnum 507
+Zone 5
+Flags pk
+North 501
+East 505
+Name Phone Wifi Controller
+ShortDescription You see an IEEE 802.11 manual on the floor and the boots of a repair technician sticking out from a hole in the wall.
+Description You see an IEEE 802.11 manual on the floor and the boots of a repair technician sticking out from a hole in the wall.
+Vnum 601
+Zone 6
+Flags pk
+South 605
+West 602
+Up 902
+Name Phone SIM Card
+ShortDescription You walk on the SIM card contacts and see green electricity running through it. With each step you see phone numbers, ICCID, and IMSI values float up in a puff of smoke.
+Description You walk on the SIM card contacts and see green electricity running through it. With each step you see phone numbers, ICCID, and IMSI values float up in a puff of smoke.
+Vnum 602
+Zone 6
+Flags pk
+South 603
+East 601
+West 604
+Up 605
+Name Phone CPU
+ShortDescription The room is centered around an idling Cortex-A57 quad-core CPU. It's hum fills the room.
+Description The room is centered around an idling Cortex-A57 quad-core CPU. It's hum fills the room.
+Vnum 603
+Zone 6
+Flags pk
+North 602
+South 611
+East 610
+West 606
+Up 612
+Down 604
+Name Phone RAM
+ShortDescription Passwords and fragments of hidden messages are pasted to the walls.
+Description Passwords and fragments of hidden messages are pasted to the walls.
+Vnum 604
+Zone 6
+Flags pk
+East 602
+Up 603
+Name Phone RF Baseband
+ShortDescription Radio waves cause a shimmer as they criss-cross a void. 
+Description Radio waves cause a shimmer as they criss-cross a void.
+Vnum 605
+Zone 6
+Flags pk
+North 601
+West 602
+Name Phone Speech Processor
+ShortDescription You hear a voice resonate through the room and see an ADC along the wall receive the waves, pulse a purple light, and emit packets of voice data.
+Description You hear a voice resonate through the room and see an ADC along the wall receive the waves, pulse a purple light, and emit packets of voice data.
+Vnum 606
+Zone 6
+Flags pk
+East 603
+Name Phone Camera
+ShortDescription Strobes flash in the room as pictures spit from the walls into mounting piles
+Description Strobes flash in the room as pictures spit from the walls into mounting piles.
+Vnum 607
+Zone 6
+Flags pk
+North 609
+Name Phone USB Controller
+ShortDescription USB ports of various sizes line the wall; each one is marred by multiple failed attempts.
+Description USB ports of various sizes line the wall; each one is marred by multiple failed attempts.
+Vnum 608
+Zone 6
+Flags pk
+West 611
+Name Phone SD Card
+ShortDescription Little carts of data bring data to and from the inserted memory card.
+Description Little carts of data bring data to and from the inserted memory card.
+Vnum 609
+Zone 6
+Flags pk
+North 611
+South 607
+Name Phone Bluetooth Controller
+ShortDescription You hear Viking horns blowing as you enter the room. Little packets of data zip around the room as you walk across old slices of wire.
+Description You hear Viking horns blowing as you enter the room. Little packets of data zip around the room as you walk across old slices of wire.
+Vnum 610
+Zone 6
+Flags pk
+West 603
+Down 704
+Name Phone Flash Controller
+ShortDescription This room houses the phone's data storage manager.
+Description This room houses the phone's data storage manager.
+Vnum 611
+Zone 6
+Flags pk
+North 603
+South 609
+East 608
+Name Phone IR Controller
+ShortDescription A red glow outlines the gray paneled walls.
+Description A red glow outlines the gray paneled walls.
+Vnum 612
+Zone 6
+Flags pk
+Down 603
+Name Watch Compass
+ShortDescription A large tub of water sits in the middle of the room. A cork with a needle spins in the tub.
+Description A large tub of water sits in the middle of the room. A cork with a needle spins in the tub.
+Vnum 701
+Zone 7
+Flags pk
+North 705
+South 703
+Name Watch Accelerometer
+ShortDescription You feel the G-forces pull you randomly around the room.
+Description You feel the G-forces pull you randomly around the room.
+Vnum 702
+Zone 7
+Flags pk
+East 705
+Name Watch GPS Module
+ShortDescription You carefully walk around the pins sticking out of the maps on the floor.
+Description You carefully walk around the pins sticking out of the maps on the floor.
+Vnum 703
+Zone 7
+Flags pk
+North 701
+Name Watch Bluetooth Controller
+ShortDescription You see packets of data enter from one wall and waves emanating from another walls.
+Description You see packets of data enter from one wall and waves emanating from another walls.
+Vnum 704
+Zone 7
+Flags pk
+South 610
+West 705
+Name Watch Processor
+ShortDescription A small SnapDragon is chained to the center of the room spitting fire.
+Description A small SnapDragon is chained to the center of the room spitting fire.
+Vnum 705
+Zone 7
+Flags pk
+South 701
+East 704
+West 702
+Down 706
+Name Watch Heartbeat Sensor
+ShortDescription You hear the echo of the 'lub-dub' and see a green laser coming from the ceiling and bouncing off the floor.
+Description You hear the echo of the 'lub-dub' and see a green laser coming from the ceiling and bouncing off the floor.
+Vnum 706
+Zone 7
+Flags pk
+Up 705
+Name DVR Wifi Controller
+ShortDescription You see an IEEE 802.11 manual on the floor and the boots of a repair technician sticking out from a hole in the wall. The room hums with energy.
+Description You see an IEEE 802.11 manual on the floor and the boots of a repair technician sticking out from a hole in the wall. The room hums with energy.
+Vnum 801
+Zone 8
+Flags pk
+North 903
+Down 806
+Name DVR Camera 1
+ShortDescription A 120 degree view of a parking lot floats in the middle of the room.
+Description A 120 degree view of a parking lot floats in the middle of the room.
+Vnum 802
+Zone 8
+Flags pk
+South 803
+Name DVR Camera 2
+ShortDescription An infrared view of a suburban street covers one of the walls.
+Description An infrared view of a suburban street covers one of the walls.
+Vnum 803
+Zone 8
+Flags pk
+North 802
+South 804
+Name DVR Camera 3
+ShortDescription A 90 degree view of a nursery covers one of the walls.
+Description A 90 degree view of a nursery covers one of the walls.
+Vnum 804
+Zone 8
+Flags pk
+North 803
+South 805
+West 806
+Name DVR Camera 4
+ShortDescription A 120 degree view of a parking lot floats in the middle of the room.
+Description A 120 degree view of a parking lot floats in the middle of the room.
+Vnum 805
+Zone 8
+Flags pk
+North 804
+East 806
+Name DVR Monitor
+ShortDescription Multiple video streams converge and fall into a tube in the center of the room. 
+Description Multiple video streams converge and fall into a tube in the center of the room. 
+Vnum 806
+Zone 8
+Flags pk
+North 802
+South 803
+East 804
+West 805
+Up 801
+Name Wifi Spectrum
+ShortDescription You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Description You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Vnum 901
+Zone 9
+Flags pk
+South 902
+East 904
+Up 601
+Down 501
+Name Wifi Spectrum
+ShortDescription You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Description You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Vnum 902
+Zone 9
+Flags pk
+North 901
+South 903
+East 905
+Name Wifi Spectrum
+ShortDescription You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Description You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Vnum 903
+Zone 9
+Flags pk
+North 902
+South 801
+East 906
+Name Wifi Spectrum
+ShortDescription You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Description You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Vnum 904
+Zone 9
+Flags pk
+South 905
+West 901
+Name Wifi Spectrum
+ShortDescription You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Description You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Vnum 905
+Zone 9
+Flags pk
+North 904
+South 906
+West 902
+Name Wifi Spectrum
+ShortDescription You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Description You float above a sea of antennae, kept aloft in a warm flow of radiation.
+Vnum 906
+Zone 9
+Flags pk
+North 905
+West 903
+Name LegitBS Central Core1
+ShortDescription Racks of servers line the walls. The heat is oppressive.
+Description Racks of servers line the walls. The heat is oppressive.
+Vnum 1001
+Zone 10
+Flags pk
+South 1002
+East 1004
+Name LegitBS Central Core2
+ShortDescription Racks of servers line the walls. The heat is oppressive.
+Description Racks of servers line the walls. The heat is oppressive.
+Vnum 1002
+Zone 10
+Flags pk
+North 1001
+South 1003
+East 1005
+Name LegitBS Central Core3
+ShortDescription Racks of servers line the walls. The heat is oppressive.
+Description Racks of servers line the walls. The heat is oppressive.
+Vnum 1003
+Zone 10
+Flags pk
+North 1002
+East 1006
+Name LegitBS Central Core4
+ShortDescription Racks of servers line the walls. The heat is oppressive.
+Description Racks of servers line the walls. The heat is oppressive.
+Vnum 1004
+Zone 10
+Flags pk
+South 1005
+East 1007
+West 1001
+Name LegitBS Central Core5
+ShortDescription Racks of servers line the walls. The heat is oppressive.
+Description Racks of servers line the walls. The heat is oppressive.
+Vnum 1005
+Zone 10
+Flags pk
+North 1004
+South 1006
+East 1008
+West 1002
+Name LegitBS Central Core6
+ShortDescription Racks of servers line the walls. The heat is oppressive.
+Description Racks of servers line the walls. The heat is oppressive.
+Vnum 1006
+Zone 10
+Flags pk
+North 1005
+East 1009
+West 1003
+Name LegitBS Central Core7
+ShortDescription Racks of servers line the walls. The heat is oppressive.
+Description Racks of servers line the walls. The heat is oppressive.
+Vnum 1007
+Zone 10
+Flags pk
+South 1008
+West 1004
+Name LegitBS Central Core8
+ShortDescription Racks of servers line the walls. The heat is oppressive.
+Description Racks of servers line the walls. The heat is oppressive.
+Vnum 1008
+Zone 10
+Flags pk
+North 1007
+South 1009
+Name LegitBS Central Core9
+ShortDescription Racks of servers line the walls. The heat is oppressive.
+Description Racks of servers line the walls. The heat is oppressive.
+Vnum 1009
+Zone 10
+Flags pk
+North 1008
+West 1006
+Down 1011
+Name LegitBS Magic Networking Box
+ShortDescription This is where Selir's special sauce comes from. People would pay good money to get a glimpse of this place.
+Description This is where Selir's special sauce comes from. People would pay good money to get a glimpse of this place.
+Vnum 1010
+Zone 10
+Flags pk
+South 1011
+West 1103
+Up 1008
+Name LegitBS Alcohol Storage
+ShortDescription A deep well of top shelf bourbon sits in the middle of the room. 
+Description A deep well of top shelf bourbon sits in the middle of the room.
+Vnum 1011
+Zone 10
+Flags pk
+North 1010
+South 1013
+East 1012
+West 1014
+Name LegitBS Lounge
+ShortDescription Meme photos line the walls, empty drinking glasses litter every table, and ping pong paddles sit on an empty table. 
+Description Meme photos line the walls, empty drinking glasses litter every table, and ping pong paddles sit on an empty table.
+Vnum 1012
+Zone 10
+Flags None
+South 1013
+West 1011
+Name LegitBS Idea Zone
+ShortDescription You are in a warehouse of unpublished reference books and arcane hardware. It looks easy to become lost.
+Description You are in a warehouse of unpublished reference books and arcane hardware. It looks easy to become lost.
+Vnum 1013
+Zone 10
+Flags pk
+North 1011
+East 1015
+West 1017
+Up 1012
+Name LegitBS Ninja Closet
+ShortDescription Software for architecture that doesn't yet exist scrolls down the walls. Discarded notes about secret architecture litter the ground.
+Description Software for architecture that doesn't yet exist scrolls down the walls. Discarded notes about secret architecture litter the ground.
+Vnum 1014
+Zone 10
+Flags pk
+North 610
+South 403
+East 1102
+Up 1011
+Name LegitBS Idea Zone
+ShortDescription You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Description You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Vnum 1015
+Zone 10
+Flags pk
+East 1019
+West 1020
+Name LegitBS Idea Zone
+ShortDescription You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Description You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Vnum 1016
+Zone 10
+Flags pk
+North 1016
+South 1015
+East 1019
+Name LegitBS Idea Zone
+ShortDescription You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Description You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Vnum 1017
+Zone 10
+Flags pk
+South 1015
+West 1018
+Name LegitBS Idea Zone
+ShortDescription You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Description You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Vnum 1018
+Zone 10
+Flags pk
+North 1013
+South 1019
+East 1017
+West 1016
+Name LegitBS Idea Zone
+ShortDescription You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Description You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Vnum 1019
+Zone 10
+Flags pk
+North 1020
+East 1015
+West 1018
+Up 1019
+Name LegitBS Idea Zone
+ShortDescription You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Description You are in a warehouse of unpublished reference books, memes, and arcane hardware. It looks easy to become lost.
+Vnum 1020
+Zone 10
+Flags pk
+North 1018
+East 1016
+Down 802

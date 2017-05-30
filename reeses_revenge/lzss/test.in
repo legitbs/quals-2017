@@ -1,0 +1,7 @@
+This is a test file for the compression algorithm.
+
+It should compress text like this very well.
+
+This algorithm uses LZSS compression which is a modified.
+
+LZSS compression is a modified version of LZW.

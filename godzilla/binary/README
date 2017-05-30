@@ -1,0 +1,9 @@
+Deploy godzilla at 11577
+Deploy godzilla_server at 11578
+
+Note: The godzilla service connects to localhost:11578 or godzilla_server to send certain commands to it
+Both services need to be accessible but godzilla must also be able to connect to godzilla_server
+
+There should be no exploitable bugs in either service (fingers crossed). The object is to brute force the private key
+
+The private.key file contains the private key -- it is read into memory by godzilla (they don't have it). It should be read-only at /home/godzilla/private.key

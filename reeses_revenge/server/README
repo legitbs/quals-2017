@@ -1,0 +1,8 @@
+REESES:
+
+This tool is the emulator platform.  There are two modes to compile this tool:
+
+Alter the mpes.cpp file and comment out #define SERVER to put REESES in file mode.  It will now accept a command line file as an argument and run that file versus accepting stdin input (this is meant to operate in xinetd configuration).
+
+-sirgoon
+

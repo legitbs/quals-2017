@@ -1,0 +1,160 @@
+#include "common.h"
+
+#include <malloc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+CMMU::CMMU() : m_pMemory( NULL ), m_memSize(0), m_baseAddress(0)
+{
+
+}
+
+CMMU::~CMMU()
+{
+	if ( m_pMemory )
+		free( m_pMemory );
+}
+
+bool CMMU::Setup( uint32_t startAddress, uint32_t endAddress )
+{
+	// Find size
+	if ( startAddress >= endAddress )
+		return false;
+
+	if ( m_pMemory != NULL )
+		return false;
+
+	uint32_t memRegionSize = (endAddress - startAddress);
+	uint32_t pageCount;
+
+	if ( memRegionSize % PAGETABLE_SIZE != 0 )
+	{
+		pageCount = (memRegionSize/PAGETABLE_SIZE)+1;	
+	}
+	else
+		pageCount = (memRegionSize/PAGETABLE_SIZE);
+
+	// Now allocate pages
+	m_pMemory = (uint8_t*)memalign( PAGETABLE_SIZE, (PAGETABLE_SIZE*pageCount) );
+
+	if ( !m_pMemory )
+		return false;
+
+	m_memSize = (PAGETABLE_SIZE*pageCount);
+
+	// Set to zeros as this will allow the bss to be zero'd automatically
+	memset( m_pMemory, 0, m_memSize );
+#if MMU_DEBUG
+	printf( "START(%X) SIZE(%X)\n", m_pMemory, m_memSize );
+#endif
+
+	// Now set base address
+	m_baseAddress = startAddress;
+
+	// Successfully setup
+	return (true);
+}
+
+bool CMMU::WriteMemory( uint32_t address, uint8_t *pData, uint32_t length )
+{
+	if ( m_pMemory == NULL || length == 0 || address < m_baseAddress )
+		return false;
+
+	uint32_t offsetAddress = (address - m_baseAddress);
+
+	if ( (offsetAddress+length) > m_memSize )
+		return false;
+
+#if MMU_DEBUG
+	printf( "STORE(%X) LEN(%X) VALUE(%X)\n", address, length, *(uint32_t*)pData );
+#endif
+	memcpy( m_pMemory+offsetAddress, pData, length );
+
+	return true;	
+}
+
+bool CMMU::ReadMemory( uint32_t address, uint8_t *pData, uint32_t length )
+{
+	if ( m_pMemory == NULL || length == 0 || address < m_baseAddress )
+		return false;
+
+	uint32_t offsetAddress = (address - m_baseAddress);
+
+	if ( (offsetAddress+length) > m_memSize )
+		return false;
+
+	memcpy( pData, m_pMemory+offsetAddress, length );
+
+	return true;
+}
+
+uint32_t CMMU::fetchWord( uint32_t addr, uint8_t memaccType, CCPU *pCPU )
+{
+	uint32_t word;
+	if ( !ReadMemory( addr, (uint8_t*)&word, sizeof(uint32_t) ) )
+	{
+		pCPU->doException( CCPU::EXCEPTION_AdEL, memaccType );
+	}
+
+	return (word);
+}
+
+uint16_t CMMU::fetchHalfword( uint32_t addr, uint8_t memaccType, CCPU *pCPU )
+{
+	uint16_t halfword;
+	if ( !ReadMemory( addr, (uint8_t*)&halfword, sizeof(uint16_t) ) )
+	{
+		pCPU->doException( CCPU::EXCEPTION_AdEL, memaccType );
+	}
+
+	return (halfword);
+}
+
+uint8_t CMMU::fetchByte( uint32_t addr, uint8_t memaccType, CCPU *pCPU )
+{
+	uint8_t byte;
+	if ( !ReadMemory( addr, (uint8_t*)&byte, sizeof(uint8_t) ) )
+	{
+		pCPU->doException( CCPU::EXCEPTION_AdEL, memaccType );
+	}
+
+	return (byte);
+}
+
+void CMMU::storeWord( uint32_t addr, uint32_t value, CCPU *pCPU )
+{
+	if ( !WriteMemory( addr, (uint8_t *)&value, sizeof(value) ) )
+	{
+#if MMU_DEBUG
+	printf( "EXCP STORE: ADDR(%X) SIZE(%X)\n", addr, sizeof(value) );
+#endif
+		pCPU->doException( CCPU::EXCEPTION_AdES, MEMACC_DATASTORE );
+	}
+	return;
+}
+
+void CMMU::storeHalfword( uint32_t addr, uint16_t value, CCPU *pCPU )
+{
+	if ( !WriteMemory( addr, (uint8_t *)&value, sizeof(value) ) )
+	{
+#if MMU_DEBUG
+	printf( "EXCP STORE: ADDR(%X) SIZE(%X)\n", addr, sizeof(value) );
+#endif
+		pCPU->doException( CCPU::EXCEPTION_AdES, MEMACC_DATASTORE );
+	}
+	return;
+}
+
+void CMMU::storeByte( uint32_t addr, uint8_t value, CCPU *pCPU )
+{
+	if ( !WriteMemory( addr, (uint8_t *)&value, sizeof(value) ) )
+	{
+#if MMU_DEBUG
+	printf( "EXCP STORE: ADDR(%X) SIZE(%X)\n", addr, sizeof(value) );
+#endif
+		pCPU->doException( CCPU::EXCEPTION_AdES, MEMACC_DATASTORE );
+	}
+	return;
+}

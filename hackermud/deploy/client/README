@@ -1,0 +1,5 @@
+Deploy Port: 4041
+
+This is the service that they will access from the internet (therefore needs to be containerized)
+
+It needs to be able to access the server at the localhost on port 5050 -- but the server cannot be accessible from the Internet!
